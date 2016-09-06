@@ -1,0 +1,32 @@
+Perform a selective backup for label(s) of interest with gyb
+https://github.com/jay0lee/got-your-back/wiki#selective-backups-with-gmail-searching
+
+
+Steps for querying the msg-db.sqlite database with sqlite3:
+
+1.) Open python.exe (there's one at C:\Anaconda\Python.exe)
+2.) Use execfile('C:\\Anaconda\\sqliteTestbed.py') to run the python test bed
+3.) Copy and paste this
+
+SELECT sql FROM 
+   (SELECT * FROM sqlite_master UNION ALL
+    SELECT * FROM sqlite_temp_master)
+WHERE type!='meta'
+ORDER BY tbl_name, type DESC, name;
+
+to get the tables' and their columns' names
+
+
+
+Create new tables for the data that will be scraped by traversing the emails and crawling their relevant links:
+
+
+
+
+
+
+
+4.) For more info, see
+https://www.sqlite.org/cli.html#section_7
+https://docs.python.org/2/library/sqlite3.html
+https://github.com/jay0lee/got-your-back/wiki

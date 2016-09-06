@@ -1,0 +1,2 @@
+CREATE TABLE Senders(Message_Num INTEGER PRIMARY KEY, SenderName TEXT, SenderEmail TEXT, SenderIP TEXT);
+CREATE TABLE Jobs(JobID INTEGER PRIMARY KEY, Message_Num INTEGER,PostingURL TEXT, PostingDate TEXT, PostingCompany TEXT, WebsiteJobID TEXT, CompanyJobID TEXT, Industry TEXT,JobTitle TEXT, YearsExperience TEXT, ExperienceLevel TEXT, Skills TEXT, Salary INTEGER,City TEXT, State TEXT, ZipCode INTEGER);

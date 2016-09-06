@@ -1,0 +1,46 @@
+>>Perform a selective backup for label(s) of interest with gyb
+	https://github.com/jay0lee/got-your-back/wiki#selective-backups-with-gmail-searching
+
+
+>>Steps for querying the msg-db.sqlite database with sqlite3:
+
+1.) Open python.exe (there's one at C:\Anaconda\Python.exe)
+2.) Use execfile('C:\\Anaconda\\sqliteTestbed.py') to run the python test bed (or just python sqliteTestbed.py, if you're already in C:\Anaconda)
+3.) Copy and paste this to get the tables' and their columns' names:
+
+SELECT sql FROM 
+   (SELECT * FROM sqlite_master UNION ALL
+    SELECT * FROM sqlite_temp_master)
+WHERE type!='meta'
+ORDER BY tbl_name, type DESC, name;
+
+
+To get the top row of the Messages table:
+	
+	SELECT * FROM MESSAGES ORDER BY ROWID ASC LIMIT 1;
+
+
+>>Create new tables for the data that will be scraped by traversing the emails and crawling their relevant links:
+	>> 08/10/16: Populating the Senders table with 2019 rows of 4 columns took about 6 minutes to insert as a list of 4-tuples using sqlite3.cursor.executemany
+>>Create a spider for each type of email format (hopefully not more than one per sender)
+  that gets all the slots needed
+	I started with Dice for relative ease because I had read that Indeed was the first to try to block crawling, while Dice had not
+
+>> packages used (pip install x):
+	>>wordcloud
+		>>if the install causes error:  fatal error C1083: Cannot open include file: 'basetsd.h': No such file or directory
+		then follow this: http://stackoverflow.com/questions/23691564/running-cython-in-windows-x64-fatal-error-c1083-cannot-open-include-file-ba
+	>>scrapy
+		>>if the install for the lxml dependency fails, download the pre-compiled wheel from here:
+		http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+		and do pip install path\to\downloaded\whl
+	>>pygal
+	>>
+	
+
+
+
+>>For more info, see
+	https://www.sqlite.org/cli.html#section_7
+	https://docs.python.org/2/library/sqlite3.html
+	https://github.com/jay0lee/got-your-back/wiki

@@ -1,0 +1,76 @@
+# programming/analytics
+Python
+Web development
+Web design
+Website design
+computing
+analytics
+statistics
+C
+C++
+Matlab
+C#
+Java
+JavaScript
+Android
+.NET
+SQL
+Angular
+data visualization
+D3.js
+
+# med/pharma
+Regulatory environment
+Regulated environment
+Clinical Trials
+Troubleshooting
+Requirements Gathering
+Business Rules
+ISO 9001
+IEC 60601-1
+ISO 13485
+ISO 14971
+IEC 62304
+plastic
+biomedical engineering
+QSR
+FDA
+CAD
+Solidworks
+Autocad
+
+
+
+# six sigma / lean
+Six Sigma
+Lean environment
+Lean
+Design Verification
+Root Cause Analysis
+Design controls
+FMEA
+Hazard Analysis
+Use Case
+DOE
+Design of Experiment
+
+
+#computer/electronic systems engineering
+Software Development Life Cycle
+Software Process Engineering
+Embedded Software
+Embedded System
+Software Design
+Systems Integration
+Software Integration
+Hardware Integration
+UART
+SPI
+I2C
+Semaphore
+FPGA
+Xilinx
+microcontrollers
+mixed signal oscilloscope
+spectrum analyzer
+impedance analyzer
